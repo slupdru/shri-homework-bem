@@ -1,0 +1,119 @@
+.Body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-rows: 77px 1fr 77px;
+  color: #333333;
+  margin: 0
+}
+.Menu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px 0 42px;
+  border-bottom: 1px #f0f0f0 solid;
+}
+
+.Menu-Logo {
+  width: 108px;
+  height: 27px;
+  margin-right: 21px;
+}
+.Menu-LinkContainer{
+  display: flex;
+}
+.Menu-Link {
+  text-decoration: none;
+  margin-right: 28px;
+  font-size: 16px;
+  opacity: 0.6;
+  font-weight: bold;
+}
+.Menu-Link:visited, .Menu-Link:link{
+  color:#333;
+}
+
+.Menu-Link.Menu-Link_active{
+  opacity: 1;
+}
+.Menu.Menu_device_mobile{
+  justify-content: space-between;
+}
+.Menu-Selector{
+  margin-right: 25px;
+}
+.Menu-MobileButton {
+  width: 16px;
+  height: 14px;
+  display: none;
+}
+.Footer {
+  font-size: 12px;
+  color: #858585;
+  letter-spacing: 0.01px;
+  align-items: center;
+  padding: 0 40px 0 40px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px #f0f0f0 solid;
+}
+.Footer-Element {
+  margin-right: 15px;
+}
+
+.Main {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  margin-bottom: 80px;
+}
+
+.Main-Container {
+  grid-column: 3 / 15;
+  display: grid;
+  grid-template-rows: 107px 1fr;
+}
+.Main-Title {
+  font-size: 34px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.Menu-CollapsBlock {
+  flex-grow: 1;
+}
+
+@media (max-width: 1370px) {
+  .MainTitle {
+    font-size: calc((100vw - 375px) / (1370 - 375) * (36 - 24) + 24px);
+  }
+}
+@media (max-width: 1250px) {
+  .Main-Container {
+    grid-column: 2 / 16;
+  }
+}
+
+@media (max-width: 706px) {
+  body {
+    grid-template-rows: 77px 1fr;
+  }
+  .Footer {
+    display: none;
+  }
+  .Menu {
+    border: none;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+  }
+  .Menu-CollapsBlock {
+    display: none;
+  }
+  .Munu-MobileButton {
+    display: block;
+  }
+  .Main-Container {
+    grid-column: 1 / 17;
+    grid-template-rows: 65px 1fr;
+    padding: 0 20px 0 20px;
+  }
+}
