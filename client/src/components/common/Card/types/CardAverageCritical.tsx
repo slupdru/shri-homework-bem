@@ -8,7 +8,7 @@ import {CardProps} from '../index';
 const Card = ({ data }: CardProps) => (
   <div className={cnCard({type: 'critical', size: 'average'})}>
   <div className={cnCard('Container')}>
-    <TitleSubTitle type="critical" {...data}/>
+    <TitleSubTitle classNames={[cnCard('TitleSubTitle')]} type="critical" {...data}/>
     <WhiteBlock {...data}/>
   </div>
 </div>

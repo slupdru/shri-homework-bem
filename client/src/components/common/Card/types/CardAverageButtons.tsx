@@ -10,15 +10,15 @@ import {CardProps} from '../index';
 const Card = ({data}: CardProps) => (
   <div className={cnCard({type: 'info', size: 'average', cardType: 'buttons'})}>
   <div className={cnCard('Container')}>
-  <TitleSubTitle type="critical" {...data}/>
+  <TitleSubTitle classNames={[cnCard('TitleSubTitle')]} type="critical" {...data}/>
   <div>
-  <DescriptionLine {...data}/>
+  <DescriptionLine classNames={[cnCard('DescriptionLine')]} {...data}/>
   <div className={cnCard('ButtonsLine')}>
       <a className={cnCard('Button', {type: 'yes'})}>{data.data.buttons[0]}</a>
       <a className={cnCard('Button', {type: 'no'})}>{data.data.buttons[1]}</a>
     </div>
   </div>
-  <IconLine/>
+  <IconLine classNames={[cnCard('IconLine')]}/>
   </div>
 </div>
 );

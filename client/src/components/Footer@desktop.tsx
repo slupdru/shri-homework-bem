@@ -8,7 +8,7 @@ const Footer: React.SFC<{}> = () => (
     <div className={cnFooter('Leftblock')}>
     {elementsArr.map((el, index) => (<a key={index} className={cnFooter('Element')}>{el}</a>))}
     </div>
-    <div className="Footer-Rightblock">
+    <div className={cnFooter('Rightblock')}>
       © 2001–2017 ООО «Яндекс»
     </div>
 </footer>

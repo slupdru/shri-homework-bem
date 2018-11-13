@@ -65,3 +65,6 @@ declare interface IBaseProps {
   state : State;
   dispatch: any;
 }
+declare interface IClassNamesProps{
+  classNames?:string[];
+}

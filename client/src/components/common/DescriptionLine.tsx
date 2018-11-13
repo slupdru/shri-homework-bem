@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { cn } from '@bem-react/classname';
 
-export interface IDescriptionLine {
+export interface IDescriptionLine extends IClassNamesProps {
   description: string | null;
 }
-const cnCard = cn('Card');
-const DescriptionLine: React.SFC<IDescriptionLine> = ({ description }) => (
+const cnDescriptionLine = cn('DescriptionLine');
+const DescriptionLine: React.SFC<IDescriptionLine> = ({ description, classNames }) => (
   <div>
-    {description ? <div className={cnCard('DescriptionLine')}>
+    {description ? <div className={cnDescriptionLine(null, classNames)}>
     {description}
   </div> : null}
   </div>

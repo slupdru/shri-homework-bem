@@ -9,10 +9,10 @@ import {CardProps} from '../index';
 const Card = ({ data }: CardProps) => (
   <div className={cnCard({type: 'info', size: 'large'})}>
   <div className={cnCard('Container')}>
-  <TitleSubTitle {...data}/>
-  <DescriptionLine {...data}/>
+  <TitleSubTitle classNames={[cnCard('TitleSubTitle')]} {...data}/>
+  <DescriptionLine classNames={[cnCard('DescriptionLine')]} {...data}/>
   <img src="src/images/Richdata.svg" className="Card-PictureLine" />
-  <IconLine/>
+  <IconLine classNames={[cnCard('IconLine')]}/>
   </div>
 </div>
 );

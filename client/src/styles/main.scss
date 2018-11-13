@@ -14,7 +14,7 @@
 .Card_size_small {
   grid-column: span 2;
 }
-.Card_size_small .card__time {
+.Card_size_small .TitleSubTitle-Time {
   margin-top: 20px;
 }
 .Card_size_large {
@@ -33,17 +33,17 @@
   flex-direction: column;
   height: 100%;
 }
-.Card_Icon {
+.TitleSubTitle_Icon {
   width: 52px;
   height: 52px;
 }
 
-.Card-SubtitleLine {
+.TitleSubTitle-SubtitleLine {
   margin-bottom: 25px;
   display: flex;
   justify-content: space-between;
 }
-.Card-TitleLine {
+.TitleSubTitle-TitleLine {
   margin-bottom: 14px;
   display: grid;
   align-items: center;
@@ -52,34 +52,34 @@
   font-size: 24px;
   font-weight: bold;
 }
-.Card-HoveredIcon_type_next {
+.IconLine-HoveredIcon_type_next {
   bottom: 20px;
 }
-.Card_type_critical .Card-HoveredIcon_type_next {
+.Card_type_critical .IconLine-HoveredIcon_type_next {
   box-shadow: inset 0 0px 100px 0 #fafafa;
   border-radius: 5px;
 }
-.Card-HoveredIcon_type_close {
+.IconLine-HoveredIcon_type_close {
   top: 20px;
 }
-.Card_type_info .Card-HoveredIcon_type_close {
+.Card_type_info .IconLine-HoveredIcon_type_close {
   box-shadow: inset 0 0px 100px 0 #fafafa;
   border-radius: 5px;
 }
-.Card-HoveredIcon {
+.IconLine .IconLine-HoveredIcon {
   position: absolute;
   right: 20px;
   display: none;
   cursor: pointer;
 }
-.Card-WhiteBlock {
+.WhiteBlock {
   margin: -1px;
   padding: 20px;
   border-radius: 20px;
   color: #333333;
   background: #fafafa;
 }
-.Card:not(.Card_platform_mobile):hover .Card-HoveredIcon {
+.Card:not(.Card_platform_mobile):hover .IconLine-HoveredIcon {
   display: block;
 }
 .Card:not(.Card_type_critical):not(.Card_platform_mobile):hover {
@@ -90,10 +90,10 @@
   background: #f3f3f3;
   box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.5);
 }
-.Card_platform_mobile .Card-HoveredIcon_type_close {
+.Card_platform_mobile .IconLine-HoveredIcon_type_close {
   display: block;
 }
-.Card_platform_mobile .Card-HoveredIcon_type_next {
+.Card_platform_mobile .IconLine-HoveredIcon_type_next {
   display: none;
 }
 
@@ -107,7 +107,7 @@
 .Card-Temperature + .Card-Temperature {
   margin-left: 52px;
 }
-.Card-DescriptionLine {
+.DescriptionLine {
   font-size: 20px;
   color: #000;
 }
@@ -140,7 +140,7 @@
   border-radius: 5px;
   margin-right: 15px;
 }
-.Card-TitleSubTitle_type_critical{
+.TitleSubTitle_type_critical{
   padding: 20px 20px 0 20px;
 }
 .Card.Card_size_average.Card_type_critical .Card-DescriptionLine {
@@ -230,14 +230,14 @@
   border-radius: 8px;
   display: block;
 }
-.Card_size_small .Card-TitleLine {
+.Card_size_small .TitleSubTitle-TitleLine {
   margin-bottom: 31px;
 }
 .Card_cardType_buttons .Card-Button_type_yes {
   background: #ffd93e;
   margin-right: 18px;
 }
-.Card_size_small .Card-SubtitleLine {
+.Card_size_small .TitleSubTitle-SubtitleLine {
   flex-direction: column;
   margin-bottom: 0;
 }
@@ -278,10 +278,10 @@
 }
 
 @media (max-width: 1370px) {
-  .Card-TitleLine {
+  .TitleSubTitle-TitleLine {
     font-size: calc((100vw - 375px) / (1370 - 375) * (24 - 14) + 14px);
   }
-  .Card-DescriptionLine {
+  .DescriptionLine {
     font-size: calc((100vw - 375px) / (1370 - 375) * (20 - 18) + 18px);
   }
   .Card_size_large .Card-DescriptionLine {
@@ -295,10 +295,10 @@
   }
 }
 @media (max-width: 980px) {
-  .Card-TitleLine {
+  .TitleSubTitle-TitleLine {
     grid-template-columns: 36px 1fr;
   }
-  .Card-Icon {
+  .TitleSubTitle-Icon {
     width: 36px;
     height: 36px;
   }
@@ -316,10 +316,10 @@
     margin-left: 0px;
   }
 
-  .Card_size_small .Card-TitleLine {
+  .Card_size_small .TitleSubTitle-TitleLine {
     margin-bottom: 16px;
   }
-  .Card_size_small .Card-Time {
+  .Card_size_small .TitleSubTitle-Time {
     margin-top: 16px;
   }
   .Card-Container {
@@ -327,7 +327,7 @@
   }
 }
 @media (max-width: 706px) {
-  .Card_size_large .Card-TitleLine {
+  .Card_size_large .TitleSubTitle-TitleLine {
     margin-bottom: 16px;
   }
   .Card_size_large .Card_SubtitleLine {
@@ -353,10 +353,10 @@
   .Card_size_small .Card_SubtitleLine {
     flex-direction: row;
   }
-  .Card-Source {
+  .TitleSubTitle-Source {
     margin-right: 8px;
   }
-  .Card_size_small .Card-Time {
+  .Card_size_small .TitleSubTitle-Time {
     margin-top: 0px;
   }
 }
