@@ -1,25 +1,32 @@
-import { default as CardSmallInfo } from './types/CardSmallInfo';
-import { default as CardLargeInfo} from './types/CardLargeInfo';
-import {default as CardLargeCritical} from './types/CardLargeCritical';
-import {default as CardAverageTemperature} from './types/CardAverageTemperature';
-import {default as CardAverageMusic} from './types/CardAverageMusic';
-import {default as CardAverageCritical} from './types/CardAverageCritical';
-import {default as CardAverageButtons} from './types/CardAverageButtons';
-import * as React from 'react';
-export interface CardProps {
+import { compose, IClassNameProps } from "@bem-react/core";
+import { default as Base } from "./Card";
+import "./style.scss";
+import {default as CardButtons} from "./types/CardButtons";
+import {default as CardCritical} from "./types/CardCritical";
+import { default as CardGraph } from "./types/CardGraph";
+import {default as CardInfo} from "./types/CardInfo";
+import { default as CardLSize} from "./types/CardLSize";
+import {default as CardMSize} from "./types/CardMSize";
+import {default as CardMusic} from "./types/CardMusic";
+import { default as CardSSize } from "./types/CardSSize";
+import {default as CardTemperature} from "./types/CardTemperature";
+import { default as CardVacuumCleaner } from "./types/CardVacuumCleaner";
+export interface ICardProps extends IClassNameProps, IClassNamesProps {
   data: IDataElement;
+  size?: string;
+  type?: string;
+  dataType?: string;
 }
-const Dictionary: any = {
-  'small-card-normal': CardSmallInfo,
-  'large-card-normal': CardLargeInfo,
-  'large-card-critical': CardLargeCritical,
-  'average-card-temperature': CardAverageTemperature,
-  'average-card-music': CardAverageMusic,
-  'average-card-critical': CardAverageCritical,
-  'average-card-buttons': CardAverageButtons
-};
-
-export default ({type, data}: {type: string; data: IDataElement}) => {
-  const Element = Dictionary[type] as React.SFC<CardProps>;
-  return (<Element data={data}/>);
-};
+const Card = compose(
+  CardSSize,
+  CardLSize,
+  CardMSize,
+  CardTemperature,
+  CardMusic,
+  CardCritical,
+  CardInfo,
+  CardButtons,
+  CardGraph,
+  CardVacuumCleaner,
+)(Base);
+export default Card;

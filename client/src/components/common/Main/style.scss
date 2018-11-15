@@ -1,0 +1,36 @@
+.Main {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  margin-bottom: 80px;
+}
+
+.Main-Container {
+  grid-column: 3 / 15;
+  display: grid;
+  grid-template-rows: 107px 1fr;
+}
+.Main-Title {
+  font-size: 34px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1370px) {
+  .Main-Title {
+    font-size: calc((100vw - 375px) / (1370 - 375) * (36 - 24) + 24px);
+  }
+}
+@media (max-width: 1250px) {
+  .Main-Container {
+    grid-column: 2 / 16;
+  }
+}
+
+@media (max-width: 706px) {
+  .Main-Container {
+    grid-column: 1 / 17;
+    grid-template-rows: 65px 1fr;
+    padding: 0 20px 0 20px;
+  }
+}

@@ -1,22 +1,19 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import './styles/allPages.scss';
-import './styles/main.scss';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import reducer from './reducers';
-import { App as AppDesktop } from './App@desktop';
-import isTouchDevice from './helpers/isTouchDevice';
-import { App as AppTouch } from './App@mobile';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { applyMiddleware, createStore } from "redux";
+import thunk from "redux-thunk";
+import { App as AppDesktop } from "./App@desktop";
+import { App as AppTouch } from "./App@mobile";
+import isTouchDevice from "./helpers/isTouchDevice";
+import reducer from "./reducers";
 const store = createStore(
   reducer,
-  applyMiddleware(thunk)
+  applyMiddleware(thunk),
 );
-console.log(store.getState());
 ReactDOM.render(
   <Provider store={store}>
   {isTouchDevice() ? <AppTouch /> : <AppDesktop/>}
   </Provider>,
- document.getElementById('root')
+ document.getElementById("root"),
 );

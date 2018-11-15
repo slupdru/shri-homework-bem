@@ -1,7 +1,9 @@
 {
-  "defaultSeverity": "error",
-  "linterOptions": {
-    // "exclude": ["ts/mainPage/events.ts"]
-  },
-  "extends": ["tslint-react-recommended"]
+  "extends": ["tslint:latest", "tslint-react"],
+  "rules": {
+    // override tslint-react rules here
+    "jsx-wrap-multiline": false,
+    "jsx-no-multiline-js": false,
+    "jsx-no-lambda": false
+  }
 }

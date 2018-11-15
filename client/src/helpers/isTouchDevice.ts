@@ -1,5 +1,5 @@
 function isTouchDevice(): boolean {
-  return !!('ontouchstart' in window);
+  return !!("ontouchstart" in window);
 }
 
 export default isTouchDevice;

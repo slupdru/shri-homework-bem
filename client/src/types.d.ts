@@ -52,19 +52,19 @@ declare interface IDataElementTemperature extends IDataElement {
 declare interface IData {
   events: IDataElement[];
 }
-declare type State = {
-  activePage:number,
-  eventsData:IDataElement[],
-  page:number,
-  itemsPerPage:number,
-  types:typeEl[]
+declare interface State {
+  activePage: number;
+  eventsData: IDataElement[];
+  page: number;
+  itemsPerPage: number;
+  types: typeEl[];
 }
-declare type SelectTypeCard = 'all' | 'critical' | 'info';
+declare type SelectTypeCard = "all" | "critical" | "info";
 
 declare interface IBaseProps {
-  state : State;
+  state: State;
   dispatch: any;
 }
-declare interface IClassNamesProps{
-  classNames?:string[];
+declare interface IClassNamesProps {
+  classNamesInProps?: string[];
 }
