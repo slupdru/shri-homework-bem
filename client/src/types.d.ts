@@ -1,5 +1,5 @@
 declare type typeEl = "critical" | "info";
-declare interface Action {
+declare interface IAction {
   type: string;
   data: any;
 }
@@ -52,7 +52,7 @@ declare interface IDataElementTemperature extends IDataElement {
 declare interface IData {
   events: IDataElement[];
 }
-declare interface State {
+declare interface IState {
   activePage: number;
   eventsData: IDataElement[];
   page: number;
@@ -62,7 +62,7 @@ declare interface State {
 declare type SelectTypeCard = "all" | "critical" | "info";
 
 declare interface IBaseProps {
-  state: State;
+  state: IState;
   dispatch: any;
 }
 declare interface IClassNamesProps {

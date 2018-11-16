@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' --fix",
+    "lint:ts": "tslint -c tslint.json 'src/**/*.{ts,tsx}' --fix",
+    "lint:style":"stylelint 'src/**/*.scss'",
+    "lint": "npm run lint:ts && npm run lint:style",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -19,6 +21,9 @@
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
     "source-map-loader": "^0.2.4",
+    "stylelint": "^9.8.0",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-scss": "^3.4.0",
     "tslint": "^5.11.0",
     "tslint-eslint-rules": "^5.4.0",
     "tslint-loader": "^3.5.4",

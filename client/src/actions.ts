@@ -1,10 +1,10 @@
 import { Dispatch } from "redux";
 import postQuery from "./helpers/postQuery";
-interface IChangeCardsAction extends Action {
+interface IChangeCardsAction extends IAction {
   data: IDataElement[];
 }
 
-export function getChangeActivePageAction(num: number): Action {
+export function getChangeActivePageAction(num: number): IAction {
   return{
     data: num,
     type: "CHANGE_ACTIVE_PAGE",
@@ -29,7 +29,7 @@ function getTypesArray(type: SelectTypeCard): typeEl[] {
 }
 
 export function getChangeCardsAction(type?: string, value?: number | string) {
-  return (dispatch: Dispatch, getState: () => State) => {
+  return (dispatch: Dispatch, getState: () => IState) => {
     const {page, itemsPerPage, types} = getState();
     const reqData: any = {page, itemsPerPage, types};
     if (value && type) {

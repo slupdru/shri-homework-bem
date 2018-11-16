@@ -36,7 +36,7 @@ class CardContainer extends React.Component<any> {
     );
   }
 }
-export default connect((state: State) => ({
+export default connect((state: IState) => ({
   eventsData: state.eventsData,
   state,
 }))(CardContainer);

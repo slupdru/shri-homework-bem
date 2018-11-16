@@ -20,7 +20,7 @@ const menuLinksArr = [
 ];
 
 const cnMenu = cn("Menu");
-const Menu = ({dispatch, activePage, state}: {state: State; dispatch: any; activePage: number}) => {
+const Menu = ({dispatch, activePage, state}: {state: IState; dispatch: any; activePage: number}) => {
   function onChangeFields(type: string, value: string | number) {
     dispatch(getChangeCardsAction(type, value));
   }
@@ -74,7 +74,7 @@ const Menu = ({dispatch, activePage, state}: {state: State; dispatch: any; activ
 </nav>;
 };
 
-export default connect((state: State) => ({
+export default connect((state: IState) => ({
   activePage: state.activePage,
   state,
 }))(Menu);

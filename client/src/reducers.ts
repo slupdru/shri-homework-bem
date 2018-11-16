@@ -1,4 +1,4 @@
-const reducer = (state: State = InitState, action: Action) => {
+const reducer = (state: IState = InitState, action: IAction) => {
   switch (action.type) {
   case "CHANGE_ACTIVE_PAGE":
     return {
@@ -14,7 +14,7 @@ const reducer = (state: State = InitState, action: Action) => {
     return state;
   }
 };
-const InitState: State = {
+const InitState: IState = {
   activePage: 0,
   eventsData: [],
   itemsPerPage: 10,
