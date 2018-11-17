@@ -3,6 +3,7 @@ import { cn } from "@bem-react/classname";
 import * as React from "react";
 import { connect } from "react-redux";
 import {getChangeActivePageAction, getChangeCardsAction} from "../../actions";
+import Link from "../common/Link";
 const menuLinksArr = [
   {
     href: "index.html",
@@ -28,16 +29,15 @@ const Menu = ({dispatch, activePage, state}: {state: IState; dispatch: any; acti
   <a className={cnMenu("LogoLink")} href="index.html"><img className={cnMenu("Logo")} src="src/images/Logo.png"/></a>
   <div className={cnMenu("LinkContainer")}>
   {menuLinksArr.map((el, index) => {
-
     return (
-      <a
+      <Link
         key={index}
         href={el.href}
         onClick={() => { dispatch(getChangeActivePageAction(index)); }}
-        className={cnMenu("Link", {active: activePage === index})}
+        active={activePage === index}
       >
-      {el.name}
-      </a>
+        {el.name}
+      </Link>
     );
 
   })}

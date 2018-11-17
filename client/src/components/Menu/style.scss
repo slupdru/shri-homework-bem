@@ -14,20 +14,7 @@
 .Menu-LinkContainer{
   display: flex;
 }
-.Menu-Link {
-  text-decoration: none;
-  margin-right: 28px;
-  font-size: 16px;
-  opacity: 0.6;
-  font-weight: bold;
-}
-.Menu-Link:visited, .Menu-Link:link{
-  color:#333;
-}
 
-.Menu-Link.Menu-Link_active{
-  opacity: 1;
-}
 .Menu.Menu_device_mobile{
   justify-content: space-between;
 }

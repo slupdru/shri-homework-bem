@@ -1,8 +1,5 @@
 import { cn } from "@bem-react/classname";
 import * as React from "react";
-// import { default as MenuCommon } from './common/Menu';
-import { connect } from "react-redux";
-import { Dispatch } from "redux";
 const cnMenu = cn("Menu");
 const Menu = () => {
   return <nav className={cnMenu({device: "mobile"})}>

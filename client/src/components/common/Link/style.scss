@@ -1,0 +1,14 @@
+.Link {
+  text-decoration: none;
+  margin-right: 28px;
+  font-size: 16px;
+  opacity: 0.6;
+  font-weight: bold;
+}
+.Link:visited, .Link:link{
+  color:#333;
+}
+
+.Link.Link_active{
+  opacity: 1;
+}
